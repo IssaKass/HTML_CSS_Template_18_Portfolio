@@ -1,0 +1,100 @@
+/// Sidebar
+///
+/// @author IssaKass
+
+.sidebar {
+	z-index: var(--z-sidebar);
+	@media (min-width: 1400px) {
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
+}
+
+.profile {
+	$radius: 20px;
+
+	@media (max-width: 1399px) {
+		margin: auto;
+		max-width: 500px;
+	}
+
+	@media (min-width: 1400px) {
+		min-width: 350px;
+		max-width: 5500px;
+	}
+
+	@extend .border;
+	border-radius: $radius;
+	padding: 1em 2em;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		opacity: 0.9;
+	}
+
+	&__designation {
+		color: var(--clr-neutral-100);
+		font-weight: var(--fw-regular);
+		font-size: var(--fs-h6);
+		max-width: 13ch;
+		text-align: right;
+	}
+
+	&__content {
+		text-align: center;
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 300px;
+		margin: auto;
+		border-radius: $radius;
+		margin: 0.5em auto 2em;
+	}
+
+	&__info {
+		color: var(--clr-neutral-100);
+		font-size: var(--fs-h4);
+		margin: 0;
+	}
+
+	.copyright {
+		color: var(--clr-neutral-400);
+		font-size: var(--fs-h6);
+		text-transform: capitalize;
+		margin: 2em 0;
+	}
+}
+
+.social {
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	&__link {
+		$size: 3em;
+
+		width: $size;
+		height: $size;
+		display: grid;
+		place-items: center;
+		font-size: var(--fs-h6);
+		@extend .circle;
+		@extend .border;
+		@extend %transition;
+
+		&:hover {
+			border-color: var(--clr-primary-500);
+			color: var(--clr-primary-500);
+		}
+	}
+}

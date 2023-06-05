@@ -1,0 +1,35 @@
+/// Utility Classes
+///
+/// @author IssaKass
+
+.border {
+	border: 2px solid var(--clr-neutral-600);
+}
+
+.border-top {
+	border-top: 2px solid var(--clr-neutral-600);
+}
+
+.border-right {
+	border-right: 2px solid var(--clr-neutral-600);
+}
+
+.border-bottom {
+	border-bottom: 2px solid var(--clr-neutral-600);
+}
+
+.border-left {
+	border-left: 2px solid var(--clr-neutral-600);
+}
+
+%transition {
+	transition: 250ms ease;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.bg-video {
+	@include backgound-video(0.2);
+}

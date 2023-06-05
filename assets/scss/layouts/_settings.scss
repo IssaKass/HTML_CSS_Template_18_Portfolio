@@ -1,0 +1,64 @@
+/// Settings
+///
+/// @author IssaKass
+
+.settings {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: var(--z-settings);
+	visibility: hidden;
+	transform: translateX(100%);
+	@extend %transition;
+
+	&.active {
+		background-color: hsla(0, 0%, 60%, 0.35);
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+	&__content {
+		background-color: var(--clr-neutral-800);
+		height: 100%;
+		width: 1000px;
+		max-width: 100%;
+		margin-left: auto;
+		padding: 2em;
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+
+		&:hover {
+			color: var(--clr-primary-500);
+		}
+	}
+
+	&__title {
+		color: var(--clr-neutral-100);
+	}
+}
+
+.buttons-configuration {
+	margin-top: 4em;
+
+	.background-video-configuration {
+		font-size: var(--fs-h4);
+	}
+
+	.buttons-container {
+		button {
+			display: inline-block;
+			margin-right: 1em;
+			margin-bottom: 1em;
+			@extend .btn-unset;
+
+			&:hover,
+			&.active {
+				color: var(--clr-primary-500);
+			}
+		}
+	}
+}

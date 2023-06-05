@@ -1,0 +1,115 @@
+/// Testimonial
+///
+/// @author IssaKass
+
+.slider-wrapper {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+
+.slider-button-prev,
+.slider-button-next {
+	$size: 50px;
+
+	margin-top: 1em;
+	margin-right: 0.5em;
+	width: $size;
+	height: $size;
+	padding: 0;
+	font-size: var(--fs-h6);
+	@extend .btn-outline;
+	@extend .circle;
+	@extend .border;
+	@extend %transition;
+
+	&:hover {
+		color: var(--clr-primary-500);
+		border-color: var(--clr-primary-500);
+	}
+}
+
+.slider-slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	@extend %transition;
+}
+
+.slider-slide.active {
+	opacity: 1;
+}
+
+.client {
+	@extend .border;
+	border-radius: 2em;
+	padding: 2em 2.5em;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		margin-bottom: 2em;
+	}
+
+	&__image {
+		width: 50px;
+		aspect-ratio: 1;
+		@extend .circle;
+	}
+
+	&__name {
+		margin: 0;
+		color: var(--clr-neutral-100);
+	}
+
+	&__job {
+		margin: 0;
+		font-size: calc(var(--fs-h6) - 0.125rem);
+	}
+
+	&__company {
+		color: var(--clr-primary-500);
+		font-weight: var(--fw-bold);
+	}
+
+	&__quote {
+		font-size: var(--fs-h4);
+		color: var(--clr-neutral-100);
+		max-width: 25ch;
+	}
+}
+
+.brands {
+	margin-top: 5em;
+
+	&__description {
+		color: var(--clr-neutral-100);
+		text-transform: uppercase;
+		margin-bottom: 3em;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 2em;
+	}
+
+	.brand {
+		display: grid;
+		place-items: center;
+
+		&__image {
+			opacity: 0.5;
+			@extend %transition;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

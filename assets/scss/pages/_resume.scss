@@ -1,0 +1,52 @@
+/// Resume
+///
+/// @author IssaKass
+
+.timelines {
+	margin-left: 1em;
+	display: grid;
+	gap: 1.5em;
+	@extend .border-left;
+
+	.timeline {
+		padding-left: 2em;
+		position: relative;
+
+		&::before {
+			$size: 10px;
+
+			content: "";
+			position: absolute;
+			background-color: var(--clr-neutral-400);
+			top: 0;
+			left: $size / -2 - 1px;
+			width: $size;
+			height: $size;
+			@extend .circle;
+			@extend %transition;
+		}
+
+		&:hover::before {
+			background-color: var(--clr-primary-500);
+		}
+
+		&:hover .timeline__date {
+			color: var(--clr-primary-500);
+		}
+
+		&__date {
+			@extend %transition;
+			margin: 0;
+		}
+	}
+}
+
+.experience {
+	&__title {
+		color: var(--clr-neutral-100);
+	}
+
+	&__description {
+		margin: 0;
+	}
+}

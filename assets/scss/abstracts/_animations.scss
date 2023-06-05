@@ -1,0 +1,12 @@
+/// Animations
+///
+/// @author IssaKass
+
+@include x-keyframes(rotating) {
+	from {
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(1turn);
+	}
+}

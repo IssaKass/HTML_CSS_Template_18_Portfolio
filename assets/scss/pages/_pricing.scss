@@ -1,0 +1,67 @@
+/// Pricing
+///
+/// @author IssaKass
+
+.plans {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	gap: 2em;
+
+	.plan {
+		@extend %transition;
+		@extend .border;
+		border-radius: 1em;
+		padding: 1em 2em;
+		display: flex;
+		flex-direction: column;
+
+		&:hover,
+		&:hover .plan__header {
+			border-color: var(--clr-primary-500);
+		}
+
+		&__header {
+			@extend %transition;
+			@extend .border-bottom;
+			margin-bottom: 1em;
+		}
+
+		&__top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__name {
+			color: var(--clr-neutral-100);
+			font-size: var(--fs-h4);
+		}
+
+		&__description {
+			text-align: right;
+			max-width: 20ch;
+			font-size: calc(var(--fs-h6) - 0.125rem);
+		}
+
+		&__price {
+			font-size: var(--fs-h3);
+			margin: 0;
+
+			span {
+				color: var(--clr-primary-500);
+				font-size: calc(var(--fs-h1) - 0.25rem);
+				margin-right: 0.25em;
+			}
+		}
+
+		&__features {
+			flex: 1;
+		}
+
+		&__feature {
+			color: var(--clr-neutral-100);
+			padding: 0.5em 0;
+			font-weight: var(--fw-thin);
+		}
+	}
+}

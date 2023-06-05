@@ -1,0 +1,28 @@
+/// Mixins
+///
+/// @author IssaKass
+
+// Mixin to create a full screen background video
+@mixin backgound-video($opacity) {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: var(--z-back);
+	opacity: $opacity;
+}
+
+// Mixin for animation
+@mixin x-animation($values) {
+	-webkit-animation: $values;
+	animation: $values;
+}
+
+@mixin x-keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}

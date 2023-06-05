@@ -1,0 +1,37 @@
+/// Main (Root)
+///
+/// @author IssaKass
+
+// Abstracts
+@import "abstracts/mixins";
+@import "abstracts/colors";
+@import "abstracts/typography";
+@import "abstracts/utilities";
+@import "abstracts/animations";
+@import "abstracts/zindexes";
+
+// Base
+@import "base/base";
+
+// Components
+@import "components/preloader";
+@import "components/buttons";
+@import "components/inputs";
+
+// Layouts
+@import "layouts/grid";
+@import "layouts/main";
+@import "layouts/navbar";
+@import "layouts/sidebar";
+@import "layouts/section";
+@import "layouts/settings";
+
+// Pages
+@import "pages/home";
+@import "pages/resume";
+@import "pages/services";
+@import "pages/skills";
+@import "pages/portfolio";
+@import "pages/testimonial";
+@import "pages/pricing";
+@import "pages/contact";

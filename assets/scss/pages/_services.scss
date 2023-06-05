@@ -1,0 +1,51 @@
+/// Services
+///
+/// @author IssaKass
+
+.services {
+	&__wrapper {
+		// TODO
+		display: grid;
+		gap: 2em;
+	}
+}
+
+.service {
+	position: relative;
+	@extend .border;
+	@extend %transition;
+	padding: 2.5em 2em;
+	border-radius: 1em;
+
+	&:hover {
+		border-color: var(--clr-primary-500);
+
+		.service__projects {
+			color: var(--clr-primary-500);
+		}
+	}
+
+	&__name {
+		color: var(--clr-neutral-100);
+		margin-top: 0;
+	}
+
+	&__description {
+		margin-bottom: 1.5em;
+	}
+
+	&__projects {
+		@extend %transition;
+		color: var(--clr-neutral-100);
+		text-transform: uppercase;
+		font-size: calc(var(--fs-h6) - 0.125rem);
+	}
+
+	.icon {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		font-size: var(--fs-h3);
+		color: var(--clr-primary-500);
+	}
+}

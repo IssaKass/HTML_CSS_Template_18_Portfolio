@@ -1,0 +1,50 @@
+/// Buttons
+///
+/// @author IssaKass
+
+.btn-primary {
+	background-color: var(--clr-primary-500);
+	color: var(--clr-neutral-900);
+	padding: 0.75em 2em;
+	margin: 1em 0 0.5em;
+	border-radius: 100vmax;
+	font-size: var(--fs-h6);
+	text-transform: uppercase;
+	cursor: pointer;
+	@extend %transition;
+	@extend .border;
+	border-color: transparent;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
+
+	&:hover {
+		background-color: var(--clr-neutral-900);
+		color: var(--clr-primary-500);
+		border-color: var(--clr-primary-500);
+	}
+}
+
+.btn-secondary {
+	background-color: var(--clr-neutral-800);
+	color: var(--clr-neutral-400);
+	display: inline-block;
+}
+
+.btn-unset {
+	background-color: transparent;
+	color: var(--clr-neutral-100);
+	font-size: var(--fs-h5);
+	padding: 0.2em;
+	@extend %transition;
+}
+
+.btn-outline {
+	@extend .btn-unset;
+	@extend .border;
+}
+
+.btn-block {
+	width: 100%;
+}

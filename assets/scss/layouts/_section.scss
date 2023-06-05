@@ -1,0 +1,48 @@
+/// Sections
+///
+/// @author IssaKass
+
+.section {
+	position: relative;
+
+	@media (min-width: 1400px) {
+		min-height: 50%;
+		margin-bottom: 2em;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		display: grid;
+	}
+
+	&__subtitle {
+		color: var(--clr-neutral-100);
+		font-size: var(--fs-h6);
+		font-weight: var(--fw-thin);
+		text-transform: uppercase;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.8rem;
+		padding: 0.4rem 1rem;
+		@extend .border;
+		border-radius: 100vmax;
+	}
+
+	&__title {
+		color: var(--clr-neutral-100);
+		font-weight: var(--fw-regular);
+		font-size: var(--fs-h2);
+		margin: 0.5em 0 1em 0;
+
+		&--lg {
+			font-size: var(--fs-h1);
+		}
+
+		> * {
+			color: var(--clr-primary-500);
+		}
+	}
+
+	&__description {
+		font-size: calc(var(--fs-h6) + 0.125em);
+		max-width: 70ch;
+	}
+}

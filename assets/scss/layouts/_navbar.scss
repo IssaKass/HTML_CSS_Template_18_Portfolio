@@ -1,0 +1,60 @@
+/// Navbar
+///
+/// @author IssaKass
+
+.navbar {
+	order: -1;
+	flex: 1;
+	display: grid;
+	place-items: center;
+	z-index: var(--z-navbar);
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+
+	@media (max-width: 1399px) {
+		position: sticky;
+		top: 0.25em;
+	}
+
+	@media (min-width: 1400px) {
+		min-width: 80px;
+		max-width: 160px;
+		order: 3;
+	}
+
+	&__list {
+		@extend .border;
+		border-radius: 100vmax;
+		overflow: hidden;
+		display: flex;
+		flex-direction: row;
+		padding: 0 0.25em;
+
+		@media (max-width: 1399px) {
+			background-color: var(--clr-neutral-900);
+		}
+
+		@media (min-width: 1400px) {
+			flex-direction: column;
+			padding: 0.25em 0;
+		}
+	}
+
+	&__link {
+		$size: 2.25em;
+		margin: 0.5em;
+
+		display: grid;
+		place-items: center;
+		width: $size;
+		height: $size;
+		@extend %transition;
+
+		&:hover,
+		&.active {
+			color: var(--clr-primary-500);
+		}
+	}
+}

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drake</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- CSS Style -->
+		<link rel="stylesheet" href="assets/css/normalize.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<!-- Start Preloader -->
+		<div id="preloader" class="preloader">
+			<div class="loader"></div>
+		</div>
+		<!-- End Preloader -->
+		<!-- Start Background Video -->
+		<video id="bgVideoPlayer" class="bg-video" muted autoplay loop>
+			<source
+				id="bgVideoSource"
+				src="assets/videos/simple-strings.mp4"
+				type="video/mp4"
+			/>
+		</video>
+		<!-- Start Settings -->
+		<button class="settings-btn btn-secondary" id="settingsOpenBtn">
+			<i class="fa-solid fa-gear fa-fw icon"></i>
+		</button>
+		<div class="settings" id="settingsContainer">
+			<div class="settings__content">
+				<button class="settings__close-btn btn-unset" id="settingsCloseBtn">
+					<i class="fa-solid fa-xmark fa-fw icon"></i>
+				</button>
+				<h2 class="settings__title">Settings</h2>
+				<div class="buttons-configuration">
+					<p class="background-video-configuration">Background Video</p>
+					<div id="buttonsContainer" class="buttons-container"></div>
+				</div>
+			</div>
+		</div>
+		<!-- End Settings -->
+		<!-- End Background Video -->
+		<div class="page container">
+			<!-- Start Navbar -->
+			<nav class="navbar">
+				<ul class="navbar__list">
+					<li class="navbar__item">
+						<a href="#home" class="navbar__link active">
+							<i class="fa-solid fa-house fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#about" class="navbar__link">
+							<i class="fa-solid fa-user fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#resume" class="navbar__link">
+							<i class="fa-solid fa-briefcase fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#services" class="navbar__link">
+							<i class="fa-solid fa-bars-staggered fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#skills" class="navbar__link">
+							<i class="fa-solid fa-shapes fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#portfolio" class="navbar__link">
+							<i class="fa-solid fa-grip-vertical fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#testimonial" class="navbar__link">
+							<i class="fa-solid fa-comment-dots fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#pricing" class="navbar__link">
+							<i class="fa-solid fa-dollar-sign fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+					<li class="navbar__item">
+						<a href="#contact" class="navbar__link">
+							<i class="fa-solid fa-envelope fa-fw icon navbar__icon"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- End Navbar -->
+			<!-- Start Sidebar -->
+			<aside class="sidebar">
+				<div class="profile">
+					<div class="profile__header">
+						<img
+							class="profile__logo"
+							src="assets/images/logo.png"
+							alt="logo"
+						/>
+						<p class="profile__designation">Framer Designer & Developer</p>
+					</div>
+					<div class="profile__content">
+						<img
+							class="profile__image"
+							src="assets/images/profile.jpg"
+							alt="Profile Image"
+						/>
+						<p class="profile__info">hello@drake.design</p>
+						<p class="profile__info">Base in Los Angeles, CA</p>
+						<p class="copyright">&copy; 2022 Drake. All rights reserved</p>
+
+						<div class="social">
+							<ul class="social__list">
+								<li class="social__item">
+									<a
+										class="social__link"
+										href="https://github.com/IssaKass"
+										target="_blank"
+									>
+										<i class="fa-brands fa-github fa-fw social__icon icon"></i>
+									</a>
+								</li>
+								<li class="social__item">
+									<a
+										class="social__link"
+										href="https://pin.it/33ixDmc"
+										target="_blank"
+									>
+										<i
+											class="fa-brands fa-pinterest fa-fw social__icon icon"
+										></i>
+									</a>
+								</li>
+								<li class="social__item">
+									<a
+										class="social__link"
+										href="https://dribbble.com/Abdallah_Issa_Kass"
+										target="_blank"
+									>
+										<i
+											class="fa-brands fa-dribbble fa-fw social__icon icon"
+										></i>
+									</a>
+								</li>
+							</ul>
+
+							<button class="btn-primary btn-block">
+								<i class="fa-regular fa-envelope fa-fw icon"></i>
+								Hire Me!
+							</button>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- End Sidebar -->
+			<main class="main">
+				<!-- Start Home Section -->
+				<section class="section home" id="home">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-house fa-fw icon"></i>
+							Home
+						</p>
+						<h1 class="section__title section__title--lg">
+							Say Hi from <span>Drake</span>, Framer Designer and Developer
+						</h1>
+						<p class="section__description">
+							I design and code beautifully simple things and i love what i do.
+							Just simple like that!
+						</p>
+						<a class="goto border circle" href="#portfolio">
+							&DownArrow;
+							<img
+								class="goto__image"
+								src="assets/images/round-text.png"
+								alt=""
+							/>
+						</a>
+						<div class="facts">
+							<div class="fact">
+								<p class="fact__number">10+</p>
+								<p class="fact__description">Years of experince</p>
+							</div>
+							<div class="fact">
+								<p class="fact__number">182+</p>
+								<p class="fact__description">
+									Projects completed on 15 countries
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Home Section -->
+				<!-- Start About Section -->
+				<section class="section about" id="about">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-user fa-fw icon"></i>
+							About
+						</p>
+						<h2 class="section__title">
+							Every great design begin with an even <span>better story</span>
+						</h2>
+						<p class="section__description">
+							Since beginning my journey as a freelance designer nearly 8 years
+							ago, I've done remote work for agencies, consulted for startups,
+							and collaborated with talented people to create digital products
+							for both business and consumer use. I'm quietly confident,
+							naturally curious, and perpetually working on improving my
+							chopsone design problem at a time.
+						</p>
+					</div>
+				</section>
+				<!-- End About Section -->
+				<!-- Start Resume Section -->
+				<section class="section resume" id="resume">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-briefcase fa-fw icon"></i>
+							Resume
+						</p>
+						<h2 class="section__title">Education & <span>Experience</span></h2>
+						<div class="resume__wrapper timelines">
+							<!-- Added using JS dynamically -->
+						</div>
+					</div>
+				</section>
+				<!-- End Resume Section -->
+				<!-- Start Services Section -->
+				<section class="section services" id="services">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-bars-staggered fa-fw icon"></i>
+							Services
+						</p>
+						<h2 class="section__title">My <span>Specializations</span></h2>
+						<div class="services__wrapper">
+							<!-- Added using JS dynamically -->
+						</div>
+					</div>
+				</section>
+				<!-- End Services Section -->
+				<!-- Start Skills Section -->
+				<section class="section skills" id="skills">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-shapes fa-fw icon"></i>
+							Skills
+						</p>
+						<h2 class="section__title">My <span>Advantages</span></h2>
+						<div class="skills__wrapper">
+							<!-- Added using JS dynamically -->
+						</div>
+					</div>
+				</section>
+				<!-- End Skills Section -->
+				<!-- Start Portfolio Section -->
+				<section class="section portfolio" id="portfolio">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-grip-vertical fa-fw icon"></i>
+							Portfolio
+						</p>
+						<h2 class="section__title">Featured <span>Projects</span></h2>
+						<div class="portfolio__wrapper projects">
+							<!-- Added using JS dynamically -->
+						</div>
+					</div>
+				</section>
+				<!-- End Portfolio Section -->
+				<!-- Start Testimonial Section -->
+				<section class="section testimonial" id="testimonial">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-regular fa-comment-dots fa-fw icon"></i>
+							Testimonial
+						</p>
+						<h2 class="section__title">
+							Trusted by <span>Hundered Clients</span>
+						</h2>
+						<div class="slider" id="clientsSlider">
+							<div class="slider-wrapper">
+								<!-- Added using JS dynamically -->
+							</div>
+							<button class="slider-button-prev">
+								<i class="fa-solid fa-chevron-left fa-fw icon"></i>
+							</button>
+							<button class="slider-button-next">
+								<i class="fa-solid fa-chevron-right fa-fw icon"></i>
+							</button>
+						</div>
+						<div class="brands">
+							<p class="brands__description">Work with 60+ brands worldwide</p>
+							<div class="brands__wrapper">
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand1.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand2.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand3.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand4.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand5.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand6.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand7.png"
+									/>
+								</div>
+								<div class="brand">
+									<img
+										class="brand__image"
+										src="assets/images/brands/brand8.png"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Testimonial Section -->
+				<!-- Start Pricing Section -->
+				<section class="section pricing" id="pricing">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-dollar-sign fa-fw icon"></i>
+							Pricing
+						</p>
+						<h2 class="section__title">My <span>Pricing</span></h2>
+						<div class="pricing__wrapper plans">
+							<!-- Added using JS dynamically -->
+						</div>
+					</div>
+				</section>
+				<!-- End Pricing Section -->
+				<!-- Start Contact Section -->
+				<section class="section contact" id="contact">
+					<div class="wrapper">
+						<p class="section__subtitle">
+							<i class="fa-solid fa-envelope fa-fw icon"></i>
+							Contact
+						</p>
+						<h2 class="section__title">Let's Work <span>Together!</span></h2>
+						<div class="contact__wrapper">
+							<form action="" class="form">
+								<div class="form__group">
+									<label class="form__label" for="fullname">Full name</label>
+									<input
+										class="form__control"
+										type="text"
+										name="fullname"
+										id="fullname"
+										placeholder="Your full name"
+										required
+									/>
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="email">Email</label>
+									<input
+										class="form__control"
+										type="email"
+										name="email"
+										id="email"
+										placeholder="Your email address"
+										required
+									/>
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="phone">Phone</label>
+									<input
+										class="form__control"
+										type="tel"
+										name="phone"
+										id="phone"
+										placeholder="Your phone number"
+									/>
+								</div>
+								<div class="form__group">
+									<label class="form__label" for="subject">Subject</label>
+									<select name="subject" id="subject">
+										<option value="Subject 1">Subject 1</option>
+										<option value="Subject 2">Subject 2</option>
+										<option value="Subject 3">Subject 3</option>
+									</select>
+								</div>
+								<div class="form__group form__budget">
+									<label class="form__label" for="budget">Your budget</label>
+									<input
+										class="form__control"
+										type="tel"
+										name="budget"
+										id="budget"
+										placeholder="A range budget for your project"
+									/>
+								</div>
+								<div class="form__group form__message">
+									<label class="form__label" for="message">Message</label>
+									<textarea
+										name="message"
+										id="message"
+										placeholder="Write your message here..."
+									></textarea>
+								</div>
+								<input
+									class="btn-primary form__submit"
+									type="submit"
+									value="Send message"
+								/>
+							</form>
+						</div>
+					</div>
+				</section>
+				<!-- End Contact Section -->
+			</main>
+		</div>
+		<!-- JS -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/resume.js"></script>
+		<script src="assets/js/services.js"></script>
+		<script src="assets/js/skills.js"></script>
+		<script src="assets/js/projects.js"></script>
+		<script src="assets/js/testimonial.js"></script>
+		<script src="assets/js/plans.js"></script>
+	</body>
+</html>

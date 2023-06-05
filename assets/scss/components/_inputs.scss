@@ -1,0 +1,42 @@
+/// Inputs (textarea, select, input, ...)
+///
+/// @author IssaKass
+
+input:not([type="submit"]),
+select,
+textarea {
+	@extend %transition;
+	@extend .border-bottom;
+	background-color: transparent;
+	color: var(--clr-neutral-100);
+	font-size: calc(var(--fs-h6) + 0.125rem);
+	outline: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	padding: 0.6em 0;
+
+	&:focus {
+		border-color: var(--clr-primary-500);
+	}
+
+	::placeholder {
+		color: var(--clr-neutral-400);
+	}
+}
+
+select {
+	color: var(--clr-neutral-400);
+}
+
+textarea {
+	min-height: 6em;
+	max-height: 12em;
+	resize: vertical;
+}
+
+label {
+	text-transform: uppercase;
+	color: var(--clr-neutral-100);
+	font-size: var(--fs-h6);
+}

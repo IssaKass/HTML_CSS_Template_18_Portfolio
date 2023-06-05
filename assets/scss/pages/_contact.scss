@@ -1,0 +1,29 @@
+/// Contact
+///
+/// @author IssaKass
+
+.form {
+	display: grid;
+	gap: 3em;
+
+	@media (min-width: 767px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+
+	@media (min-width: 767px) {
+		&__budget,
+		&__message {
+			grid-column: span 2;
+		}
+	}
+
+	&__submit {
+		justify-self: flex-start;
+	}
+}

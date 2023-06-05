@@ -1,0 +1,47 @@
+/// Skills
+///
+/// @author IssaKass
+
+.skills {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1.5em 2em;
+	}
+}
+
+.skill {
+	text-align: center;
+	&__content {
+		@extend .border;
+		@extend %transition;
+		padding: 2em;
+		display: grid;
+		place-items: center;
+		border-radius: 1em;
+		height: 230px;
+
+		&:hover {
+			border-color: var(--clr-primary-500);
+		}
+
+		&:hover,
+		&:hover + .skill__name {
+			color: var(--clr-primary-500);
+		}
+	}
+
+	&__image {
+		height: 80px;
+	}
+
+	&__percentage {
+		@extend %transition;
+		margin: 0;
+	}
+
+	&__name {
+		@extend %transition;
+		color: var(--clr-neutral-100);
+	}
+}

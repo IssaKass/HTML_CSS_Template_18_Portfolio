@@ -1,0 +1,48 @@
+/// Home
+///
+/// @author IssaKass
+
+.home {
+	.goto {
+		position: relative;
+		color: var(--clr-neutral-100);
+		font-size: var(--fs-h2);
+		display: grid;
+		place-items: center;
+		width: 150px;
+		aspect-ratio: 1;
+		margin: 3em 0 3em auto;
+		@extend .circle;
+		@extend .border;
+
+		&__image {
+			position: absolute;
+			width: 120px;
+			animation: rotating infinite 10s linear;
+
+			&:hover {
+				animation-play-state: paused;
+			}
+		}
+	}
+}
+
+.facts {
+	display: flex;
+	gap: 3em;
+	flex-wrap: wrap;
+
+	.fact {
+		width: 25ch;
+
+		&__number {
+			color: var(--clr-primary-500);
+			font-size: var(--fs-h1);
+			margin: 0;
+		}
+
+		&__description {
+			text-transform: uppercase;
+		}
+	}
+}
